@@ -1,10 +1,11 @@
 pipeline {
-    agent { dockerfile true }
+    agent { dockerfile true {
+        dir 'app'
+        label 'pixi docker'}
+          }
     stages {
         stage('Build') {
             steps {
-                sh 'node --version'
-                sh 'svn --version'
             }
         }
     }
