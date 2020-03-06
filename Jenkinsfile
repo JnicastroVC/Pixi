@@ -1,12 +1,9 @@
 pipeline {
-    agent { dockerfile true {
-        dir 'app'
-        label 'pixi docker'}
-          }
+    agent { dockerfile true }
     stages {
         stage('Build') {
             steps {
-                echo "hello"
+                echo "Hello"
             }
         }
     }
